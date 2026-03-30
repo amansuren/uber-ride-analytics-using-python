@@ -1,12 +1,20 @@
 # 🚕 Uber Trip Data Analysis - EDA & Insights
 
-> Analyzing Uber trip data to discover patterns and improve ride-sharing operations
+> A Python exploratory data analysis (EDA) project examining Uber ride data to uncover patterns in trip behaviour, demand timing, usage categories, and route popularity.
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-yellow.svg)
 
-
+## 📋 Table of Contents
+ 
+1. [Problem Statement](ProblemStatement)
+2. [Background](Background)
+3. [Data Structure Overview](datastructureoverview)
+4. [Executive Summary](executive-summary)
+5. [Insights Deep Dive](insights-deep-dive)
+6. [Recommendations](recommendations)
+   
 ## ❓ Problem Statement
  
 Ride-sharing companies collect lots of data but struggle to use it effectively. This creates problems:
