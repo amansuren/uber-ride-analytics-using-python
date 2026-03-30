@@ -8,12 +8,12 @@
 
 ## 📋 Table of Contents
  
-1. [Problem Statement](#problem-statement)
-2. [Background](#background)
-3. [Data Structure Overview](#data-structure-overview)
-4. [Executive Summary](#executive-summary)
-5. [Insights Deep Dive](#insights-deep-dive)
-6. [Recommendations](#recommendations)
+1. [Problem Statement](#-problem-statement)
+2. [Background](#-background)
+3. [Data Structure Overview](#-data-structure-overview)
+4. [Executive Summary](#-executive-summary)
+5. [Insights Deep Dive](#-insights-deep-dive)
+6. [Recommendations](#-recommendations)
    
 ## ❓ Problem Statement
  
