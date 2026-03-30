@@ -1,4 +1,4 @@
-# 🚕 Uber Ride Analytics: Data-Driven Insights for Operational Excellence
+# 🚕 Uber Trip Data Analysis - EDA & Insights
 
 > Analyzing Uber trip data to discover patterns and improve ride-sharing operations
 
@@ -27,7 +27,8 @@ The analysis was conducted using **Python (Pandas, Matplotlib, Seaborn)** in a J
 
 ---
  
-## 📊 Dataset
+## 🗃️ Data Structure Overview
+source: UberDataset.csv
  
 Our data includes these details for each trip:
  
@@ -40,3 +41,30 @@ Our data includes these details for each trip:
 | `STOP` | Where the trip ended |
 | `MILES` | How far the trip was |
 | `PURPOSE` | Why the person took the trip |
+
+Added column during analysis
+| Column | Description |
+|---|---|
+| `trip` | Concatenated `START -> STOP` route string |
+| `month` | Month name extracted from `start_date` |
+| `week_name` | Day of the week extracted from `start_date` |
+| `duration` | Trip duration in minutes (`end_date − start_date`) |
+ 
+**Data quality notes:**
+- `PURPOSE` had 502 missing values (~43.5%) — the largest data quality concern
+
+## 📊 Executive Summary
+
+Metric and Value
+
+* Total trips analyzed - 1154
+* Average trip distance - 10.57 miles 
+* Average trip duration - 23.24 minutes
+* Business vs. Personal split - 93.3% Business / 6.7% Personal 
+* Most common trip purpose - Meeting (186 trips) 
+* Most frequent route - Morrisville -> Cary (75 trips) 
+* Busiest month - December (146 trips) 
+* Busiest day of the week - Friday (206 trips) 
+* Missing purpose values - 43.5% of trips
+
+
