@@ -17,12 +17,14 @@
    
 ## ❓ Problem Statement
  
-Ride-sharing companies collect lots of data but struggle to use it effectively. This creates problems:
- 
-- **Poor resource planning** - Drivers aren't in the right place at the right time
-- **Missed opportunities** - Can't identify the best times and routes for higher earnings
-- **Incomplete data** - Missing information makes it hard to understand customer needs
-- **No clear metrics** - Difficult to measure performance and improvement
+Ride-sharing platforms like Uber rely heavily on demand patterns to optimize driver allocation, reduce wait times, and improve customer experience.
+
+This project aims to:
+
+* Identify peak usage periods
+* Analyze trip behavior and distance patterns
+* Understand business vs personal usage
+* Detect data inconsistencies affecting insights
  
 **This project solves these problems** by analyzing trip patterns to help make better business decisions.
 
