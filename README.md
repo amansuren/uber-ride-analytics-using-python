@@ -8,7 +8,7 @@
 
 ![image](images/uber_bg.jpg)
 
-## 📋 Table of Contents
+##  Table of Contents
  
 1. [Problem Statement](#problem-statement)
 2. [Background](#background)
@@ -17,7 +17,7 @@
 5. [Insights Deep Dive](#insights-deep-dive)
 6. [Recommendations](#recommendations)
    
-## ❓ Problem Statement
+##  Problem Statement
  
 Ride-sharing platforms like Uber rely heavily on demand patterns to optimize driver allocation, reduce wait times, and improve customer experience.
 
@@ -31,7 +31,7 @@ This project aims to:
 **This project solves these problems** by analyzing trip patterns to help make better business decisions.
 
  
-## 🗂️ Background
+## Background
  
 Uber, as a global ride-hailing platform, generates rich transactional data per trip — including timestamps, locations, distance, and trip purpose. This dataset captures **Uber trips** spanning a full calendar year (2016).
  
@@ -39,7 +39,7 @@ The analysis was conducted using **Python (Pandas, Matplotlib, Seaborn)** in a J
 
 ---
  
-## 🗃️ Data Structure Overview
+## Data Structure Overview
 source: UberDataset.csv
  
 Our data includes these details for each trip:
@@ -65,7 +65,7 @@ Added column during analysis
 **Data quality notes:**
 - `PURPOSE` had 502 missing values (~43.5%) — the largest data quality concern
 
-## 📊 Executive Summary
+## Executive Summary
 
 Metric and Value
 
