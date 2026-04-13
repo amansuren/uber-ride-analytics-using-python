@@ -76,5 +76,53 @@ Metric and Value
 * Busiest month - December (146 trips) 
 * Busiest day of the week - Friday (206 trips) 
 * Missing purpose values - 43.5% of trips
-* Outlier trips (long distance) - 77 trips 
+* Outlier trips (long distance) - 77 trips
 
+---
+
+## Insights Deep Dive
+ 
+### 1. Trip Category — Business Dominates
+Over 93% of all trips are tagged as **Business**, with only 77 Personal trips recorded. This is likely a corporate account dataset or reflects strong business use-case concentration.
+ 
+### 2. Trip Purpose Distribution
+Among trips with a known purpose, **Meeting** is the most frequent (186), followed by **Meal/Entertainment** (160), **Errand/Supplies** (128), and **Customer Visit** (101). However, 502 trips (43.5%) have no purpose recorded — a significant data quality gap that limits deeper segmentation.
+ 
+### 3. Distance by Purpose
+Customer Visits generate the highest average distance at **20.69 miles**, followed by Meetings (**15.28 miles**). Errands and Meals are short-haul trips (~4–6 miles). The single "Commute" trip at **180.2 miles** is a notable outlier.
+
+### 4. Temporal Patterns
+ 
+- **Monthly trend:** December is the busiest month (146 trips), followed by August (133) and November (122). Activity dips sharply in September (36 trips) and May (49 trips).
+- **Day of week:** Friday leads with 206 trips. The distribution is relatively flat across weekdays (Mon–Thu: ~147–175), suggesting consistent business travel throughout the work week.
+- **Time of day:** Afternoons dominate (446 trips), followed by Evenings (328), Mornings (244), and Night (136). Peak hours cluster in the mid-afternoon window.
+ 
+### 5. Route Analysis
+The top route pair (excluding unknown locations) is **Morrisville → Cary** with 75 trips. The reverse route (**Cary → Morrisville**) ranks second with 67 trips, suggesting a regular commute or inter-office corridor. **Cary** is the single most active pickup city (201 departures).
+
+---
+
+## Recommendations
+ 
+1. **Improve purpose data capture.** With 43.5% of purpose fields missing, consider making trip purpose a required field at booking — even with a simple dropdown. This would dramatically improve segmentation and planning.
+ 
+2. **Prioritise Friday afternoon capacity.** Friday afternoons are the peak demand window. Ensure driver availability is maximised during this window, particularly on the Cary ↔ Morrisville corridor.
+ 
+3. **Focus on the Cary–Morrisville corridor.** This route accounts for 142 combined trips. Dedicated route optimisation or surge pricing strategy here could yield measurable efficiency gains.
+ 
+4. **Investigate December demand spike.** The sharp rise in December trips warrants attention — is this end-of-year business activity, holiday events, or seasonality? Tailoring driver incentives for December could maximise coverage.
+ 
+5. **Review the 77 outlier trips.** Long-distance trips may warrant a different pricing tier or vehicle category. Understanding their purpose (likely Customer Visit or Commute) would clarify whether this is expected use or anomalous behaviour.
+ 
+6. **Address data quality for "Unknown Location" entries.** 86 trips have `Unknown Location` as both start and stop. These should be investigated and, if possible, back-filled from booking records or GPS data.
+ 
+---
+ 
+## Tech Stack
+ 
+- Python 3.10
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- Jupyter Notebook
