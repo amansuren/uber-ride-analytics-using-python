@@ -40,7 +40,7 @@ The analysis was conducted using **Python (Pandas, Matplotlib, Seaborn)** in a J
 ---
  
 ## Data Structure Overview
-source: UberDataset.csv
+source: [UberDataset.csv](https://github.com/amansuren/uber-ride-analytics-using-python/blob/main/UberDataset.csv)
  
 Our data includes these details for each trip:
  
