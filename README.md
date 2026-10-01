@@ -57,11 +57,17 @@ Our data includes these details for each trip:
 Added column during analysis
 | Column | Description |
 |---|---|
-| `trip` | Concatenated `START -> STOP` route string |
-| `month` | Month name extracted from `start_date` |
-| `week_name` | Day of the week extracted from `start_date` |
-| `duration` | Trip duration in minutes (`end_date − start_date`) |
- 
+| `hour`           | Hour extracted from `start_date` (0–23)|
+| `weekday`        | Day name extracted from `start_date` (Monday–Sunday)|
+| `month`          | Month name extracted from `start_date` (January–December)|
+| `month_num`      | Month as integer (1–12) used for chronological sorting                      |
+| `duration`       | Trip duration in minutes (`end_date − start_date`)                          |      |
+| `time_of_day`    | Time band: Morning / Afternoon / Evening / Night                            |
+| `route`          | Concatenated `start -> stop` location string                                |
+| `same_city`      | Boolean - `True` if trip starts and ends in the same city (intra-city)      |
+| `purpose_clean`  | `purpose` column with NaN replaced by `"Not Recorded"` for visualisation   |
+| `is_outlier`     | Boolean - IQR-based outlier flag on `miles` (upper bound = Q3 + 1.5 × IQR) |
+
 **Data quality notes:**
 - `PURPOSE` had 502 missing values (~43.5%) — the largest data quality concern
 
@@ -88,16 +94,26 @@ Metric and Value
 Over 93% of all trips are tagged as **Business**, with only 77 Personal trips recorded. This is likely a corporate account dataset or reflects strong business use-case concentration.
  
 ### 2. Trip Purpose Distribution
+
+![Purpose Distribution](images/purpose_x_heatmap.png)
+
 Among trips with a known purpose, **Meeting** is the most frequent (186), followed by **Meal/Entertainment** (160), **Errand/Supplies** (128), and **Customer Visit** (101). However, 502 trips (43.5%) have no purpose recorded — a significant data quality gap that limits deeper segmentation.
+
  
 ### 3. Distance by Purpose
-Customer Visits generate the highest average distance at **20.69 miles**, followed by Meetings (**15.28 miles**). Errands and Meals are short-haul trips (~4–6 miles). The single "Commute" trip at **180.2 miles** is a notable outlier.
+Customer Visits generate the highest average distance at **20.69 miles**, followed by Meetings (**15.28 miles**). Errands and Meals are short-haul trips (4–6 miles). The single "Commute" trip at **180.2 miles** is a notable outlier.
 
 ### 4. Temporal Patterns
  
 - **Monthly trend:** December is the busiest month (146 trips), followed by August (133) and November (122). Activity dips sharply in September (36 trips) and May (49 trips).
+
+![Monthly Trip Volume](images/monthly_trip_volume.png)
+
 - **Day of week:** Friday leads with 206 trips. The distribution is relatively flat across weekdays (Mon–Thu: ~147–175), suggesting consistent business travel throughout the work week.
+  
 - **Time of day:** Afternoons dominate (446 trips), followed by Evenings (328), Mornings (244), and Night (136). Peak hours cluster in the mid-afternoon window.
+
+![Hourly Trip Demand](images/Hourly_trip_demand_across_day.png)
  
 ### 5. Route Analysis
 The top route pair (excluding unknown locations) is **Morrisville → Cary** with 75 trips. The reverse route (**Cary → Morrisville**) ranks second with 67 trips, suggesting a regular commute or inter-office corridor. **Cary** is the single most active pickup city (201 departures).
