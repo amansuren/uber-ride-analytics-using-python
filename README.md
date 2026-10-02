@@ -6,8 +6,6 @@
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-yellow.svg)
 
-![image](images/uber_bg.jpg)
-
 ##  Table of Contents
  
 1. [Problem Statement](#problem-statement)
@@ -16,6 +14,9 @@
 4. [Executive Summary](#executive-summary)
 5. [Insights Deep Dive](#insights-deep-dive)
 6. [Recommendations](#recommendations)
+
+![image](images/uber_bg.jpg)
+
    
 ##  Problem Statement
  
@@ -37,7 +38,7 @@ Uber, as a global ride-hailing platform, generates rich transactional data per t
  
 The analysis was conducted using **Python (Pandas, Matplotlib, Seaborn)** in a Jupyter Notebook environment. The goal is to transform raw trip logs into insights that can inform smarter operational and strategic decisions.
 
----
+
  
 ## Data Structure Overview
 source: [UberDataset.csv](https://github.com/amansuren/uber-ride-analytics-using-python/blob/main/UberDataset.csv)
@@ -86,7 +87,7 @@ Metric and Value
 * Missing purpose values - 43.5% of trips
 * Outlier trips (long distance) - 77 trips
 
----
+
 
 ## Insights Deep Dive
  
@@ -95,10 +96,9 @@ Over 93% of all trips are tagged as **Business**, with only 77 Personal trips re
  
 ### 2. Trip Purpose Distribution
 
-![Purpose Distribution](images/purpose_x_heatmap.png)
-
 Among trips with a known purpose, **Meeting** is the most frequent (186), followed by **Meal/Entertainment** (160), **Errand/Supplies** (128), and **Customer Visit** (101). However, 502 trips (43.5%) have no purpose recorded — a significant data quality gap that limits deeper segmentation.
 
+![Purpose Distribution](images/purpose_x_heatmap.png) 
  
 ### 3. Distance by Purpose
 Customer Visits generate the highest average distance at **20.69 miles**, followed by Meetings (**15.28 miles**). Errands and Meals are short-haul trips (4–6 miles). The single "Commute" trip at **180.2 miles** is a notable outlier.
@@ -118,7 +118,7 @@ Customer Visits generate the highest average distance at **20.69 miles**, follow
 ### 5. Route Analysis
 The top route pair (excluding unknown locations) is **Morrisville → Cary** with 75 trips. The reverse route (**Cary → Morrisville**) ranks second with 67 trips, suggesting a regular commute or inter-office corridor. **Cary** is the single most active pickup city (201 departures).
 
----
+
 
 ## Recommendations
  
@@ -134,7 +134,7 @@ The top route pair (excluding unknown locations) is **Morrisville → Cary** wit
  
 6. **Address data quality for "Unknown Location" entries.** 86 trips have `Unknown Location` as both start and stop. These should be investigated and, if possible, back-filled from booking records or GPS data.
  
----
+
  
 ## Tech Stack
  
