@@ -98,7 +98,7 @@ Over 93% of all trips are tagged as **Business**, with only 77 Personal trips re
 
 Among trips with a known purpose, **Meeting** is the most frequent (186), followed by **Meal/Entertainment** (160), **Errand/Supplies** (128), and **Customer Visit** (101). However, 502 trips (43.5%) have no purpose recorded — a significant data quality gap that limits deeper segmentation.
 
-![Purpose Distribution](images/purpose_x_heatmap.png) 
+![Purpose Distribution](images/purpose_distribution.png)
  
 ### 3. Distance by Purpose
 Customer Visits generate the highest average distance at **20.69 miles**, followed by Meetings (**15.28 miles**). Errands and Meals are short-haul trips (4–6 miles). The single "Commute" trip at **180.2 miles** is a notable outlier.
@@ -117,6 +117,9 @@ Customer Visits generate the highest average distance at **20.69 miles**, follow
  
 ### 5. Route Analysis
 The top route pair (excluding unknown locations) is **Morrisville → Cary** with 75 trips. The reverse route (**Cary → Morrisville**) ranks second with 67 trips, suggesting a regular commute or inter-office corridor. **Cary** is the single most active pickup city (201 departures).
+![Purpose × Time of Day](images/purpose_x_heatmap.png)  ![route_frequency](images/route_frequency.png)
+
+
 
 
 
